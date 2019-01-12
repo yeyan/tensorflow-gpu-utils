@@ -1,4 +1,4 @@
-#!/usr/env python
+#!/usr/bin/env python
 
 import os
 import re
@@ -31,9 +31,9 @@ def open_browser_session(container_name):
             subprocess.check_call('xdg-open http://localhost:8888/?token={}'.format(token), shell=True)
 
 
-def start_tensorflow_docker(mapping_directory='./notebooks', docker_name=None):
+def start_tensorflow_docker(mapping_directory='notebooks', docker_name=None):
     if not os.path.exists(mapping_directory):
-        os.mkdirs(mapping_directory)
+        os.makedirs(mapping_directory)
     else:
         mapping_directory = os.path.abspath(mapping_directory)
 
