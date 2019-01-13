@@ -45,7 +45,7 @@ def start_tensorflow_docker(mapping_directory='notebooks', docker_name=None):
     thread.start()
 
     os.system(
-        f'docker run -p 8888:8888 --runtime=nvidia -v{mapping_directory}:/notebooks  --name {docker_name} -it tensorflow-gpu-vim'
+        f'docker run -p 8888:8888 --runtime=nvidia -v{mapping_directory}:/notebooks  --rm --name {docker_name} -it tensorflow-gpu-vim'
     )
 
 if __name__ == '__main__':
